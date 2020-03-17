@@ -22,11 +22,27 @@ $(document).ready(function() {
                     songImg: canzone.poster,
                     songName: canzone.title,
                     author: canzone.author,
-                    year: canzone.year
+                    year: canzone.year,
+                    genre: canzone.genre
                 }
                 var copiaCanzoni = template(elementiCanzone);
                 $('.cds-container').append(copiaCanzoni);
             }
+        }
+    });
+
+    $('.genre-selector').change(function() {
+        var selectedGenre = $(this).val();
+        if (selectedGenre == '') {
+            $('.cd').show();
+        } else {
+            $('.cd').each(function(){
+                if (selectedGenre.toLowerCase() == $(this).data('genre').toLowerCase()) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            });
         }
     });
 

@@ -14,19 +14,20 @@
                 <img src="logo.png" alt="logo" />
             </div>
         </header>
-
+        <div class="container">
+            <select class="genre-selector">
+                <option value="">Scegli genere</option>
+                <option value="metal">Metal</option>
+                <option value="pop">Pop</option>
+                <option value="rock">Rock</option>
+                <option value="jazz">Jazz</option>
+            </select>
+        </div>
         <div class="cds-container container">
-            <!-- Disco ad esempio -->
-            <div class="cd">
-                <img src="https://upload.wikimedia.org/wikipedia/en/9/9f/Ten_Summoner%27s_Tales.jpg" alt="">
-                <h3>Ten's Summoners Tales</h3>
-                <span class="author">Sting</span>
-                <span class="year">1993</span>
-            </div>
         </div>
 
         <script id="card-song-template" type="text/x-handlebars-template">
-            <div class="cd">
+            <div class="cd" data-genre="{{genre}}">
                 <img src="{{songImg}}" alt="{{songName}} cover image">
                 <h3>{{songName}}</h3>
                 <span class="author">{{author}}</span>
