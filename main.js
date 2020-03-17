@@ -8,11 +8,26 @@ In base a cosa scegliamo nella select vedremo i corrispondenti cd.
 
 $(document).ready(function() {
 
-    var source = $("entry-template").html();
+    var source = $("#card-song-template").html();
     var template = Handlebars.compile(source);
 
     $.ajax({
-
+        url: 'https://flynn.boolean.careers/exercises/api/array/music',
+        method: 'GET',
+        success: function (data) {
+            var canzoni = data.response;
+            for (var i = 0; i < canzoni.length; i++) {
+                var canzone = canzoni[i];
+                var elementiCanzone = {
+                    songImg: canzone.poster,
+                    songName: canzone.title,
+                    author: canzone.author,
+                    year: canzone.year
+                }
+                var copiaCanzoni = template(elementiCanzone);
+                $('.cds-container').append(copiaCanzoni);
+            }
+        }
     });
 
 
