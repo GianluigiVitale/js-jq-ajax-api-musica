@@ -24,7 +24,15 @@
                 <span class="year">1993</span>
             </div>
         </div>
-        
+
+        <script id="entry-template" type="text/x-handlebars-template">
+            <div class="cd">
+                <img src="{{songImg}}" alt="{{songName}} cover image">
+                <h3>{{songName}}</h3>
+                <span class="author">{{author}}</span>
+                <span class="year">{{year}}</span>
+            </div>
+        </script>
 
         <script src="main.js" charset="utf-8"></script>
     </body>
