@@ -5,4 +5,7 @@ There is also a select to filter the songs by genre.
 ### [Live Website](https://gianluigivitale.github.io/js-jq-ajax-api-musica/)
 ***
 ### Preview:
+Ajax request:  
+![Preview](img/ajax.jpg "Preview")
+Preview:  
 ![Preview](img/preview.jpg "Preview")
