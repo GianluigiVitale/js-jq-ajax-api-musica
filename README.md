@@ -6,6 +6,7 @@ There is also a select to filter the songs by genre.
 ***
 ### Preview:
 Ajax request:  
-![Preview](img/ajax.jpg "Preview")
+![Preview](img/ajax.jpg "Preview")  
+
 Preview:  
 ![Preview](img/preview.jpg "Preview")
